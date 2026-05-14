@@ -3,13 +3,15 @@ import { about } from "../data/data";
 
 export default function About() {
   return (
-    <section className="about">
+    <section className="about section container">
       <h1>{about.title}</h1>
       <h2>{about.role}</h2>
-      {about.bio.map((line, i) => (
-        <p key={i}>{line}</p>
-      ))}
-      <blockquote>{about.quote}</blockquote>
+      <div className="about__bio">
+        {about.bio.map((line, i) => (
+          <p key={i}>{line}</p>
+        ))}
+      </div>
+      <blockquote className="about__quote">{about.quote}</blockquote>
     </section>
   );
 }
