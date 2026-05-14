@@ -12,6 +12,8 @@ import About from "./components/About";
 import Atelier from "./components/Atelier";
 import Journal from "./components/Journal";
 import Cinema from "./components/Cinema";
+import Contact from "./components/Contact";
+
 
 export default function App() {
   return (
@@ -28,6 +30,7 @@ export default function App() {
           <Route path="/atelier" element={<Atelier />} />
           <Route path="/journal" element={<Journal />} />
           <Route path="/cinema" element={<Cinema />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />

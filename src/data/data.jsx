@@ -39,6 +39,9 @@ export const navLinks = [
   { label: "Atelier", href: "/atelier" },
   { label: "Journal", href: "/journal" },
   { label: "Cinema", href: "/cinema" },
+  { label: "Contact", href: "/contact" }
+
+  
 ];
 
 export const projects = [
@@ -74,4 +77,16 @@ export const collaborate = {
   title: "Let’s Work Together",
   body: "ÆTHEREAL SIGHT is open to collaborations in film, photography, and symbolic art. Share your vision and let’s create something meaningful.",
   ctaLabel: "Book a Session"
+};
+
+export const contact = {
+  title: "Get In Touch",
+  subtitle: "We’d love to hear from you",
+  description: "Whether you’re interested in booking a session, collaborating on a project, or just saying hello drop us a message.",
+  fields: [
+    { name: "user_name", placeholder: "Your Name", type: "text" },
+    { name: "user_email", placeholder: "Your Email", type: "email" },
+    { name: "message", placeholder: "Your Message", type: "textarea" }
+  ],
+  ctaLabel: "Send Message"
 };
