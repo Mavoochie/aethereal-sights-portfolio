@@ -1,6 +1,5 @@
-
-import { siteInfo, navLinks, about } from "../data/data";
-// Styles are in src/styles/styles.css — imported once in App.jsx
+import { siteInfo, navLinks } from "../data/data";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -8,10 +7,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__inner">
-
-        {/* Top grid: Brand | Nav | Contact */}
         <div className="footer__top">
-
           {/* Brand */}
           <div className="footer__brand">
             <p className="footer__brand-name">{siteInfo.name}</p>
@@ -27,9 +23,9 @@ export default function Footer() {
             <p className="footer__col-title">Navigate</p>
             <nav className="footer__nav">
               {navLinks.map((link) => (
-                <a key={link.label} href={link.href} className="footer__nav-link">
+                <Link key={link.label} to={link.href} className="footer__nav-link">
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
@@ -38,18 +34,9 @@ export default function Footer() {
           <div className="footer__col">
             <p className="footer__col-title">Reach Out</p>
             <div className="footer__contact">
-              <div className="footer__contact-item">
-                <span className="footer__contact-icon">✦</span>
-                <span className="footer__contact-text">{siteInfo.contact.instagram}</span>
-              </div>
-              <div className="footer__contact-item">
-                <span className="footer__contact-icon">◎</span>
-                <span className="footer__contact-text">{siteInfo.contact.phone}</span>
-              </div>
-              <div className="footer__contact-item">
-                <span className="footer__contact-icon">◈</span>
-                <span className="footer__contact-text">{siteInfo.contact.location}</span>
-              </div>
+              <div className="footer__contact-item">✦ {siteInfo.contact.instagram}</div>
+              <div className="footer__contact-item">◎ {siteInfo.contact.phone}</div>
+              <div className="footer__contact-item">◈ {siteInfo.contact.location}</div>
             </div>
           </div>
         </div>
@@ -59,11 +46,9 @@ export default function Footer() {
           <p className="footer__copy">
             © {year} {siteInfo.name} · {siteInfo.founderShort} · All rights reserved.
           </p>
-          <span className="footer__film-strip">
-            ▐██▌▐██▌▐██▌▐██▌▐██▌▐██▌
-          </span>
+          <span className="footer__film-strip">▐██▌▐██▌▐██▌▐██▌▐██▌▐██▌</span>
+          <p className="footer__tagline">ÆTHEREAL SIGHTS - Designing Realities</p>
         </div>
-
       </div>
     </footer>
   );
