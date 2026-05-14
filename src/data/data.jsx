@@ -1,3 +1,15 @@
+export const siteData = {
+  hero: {
+    title: "Welcome to Æthereal Sight",
+    subtitle: "Visual storytelling studio",
+    cta: ["Explore Work", "Contact Us"]
+  },
+  // other fields...
+};
+
+export default siteData;
+
+
 export const siteInfo = {
   name: "ÆTHEREAL SIGHT",
   tagline: "Filmmaker & Creative Director",
