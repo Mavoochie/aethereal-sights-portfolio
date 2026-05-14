@@ -1,18 +1,15 @@
-// src/App.jsx
-import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import "./index.css";
 
-function App() {
+import "./styles/styles.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+
+export default function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
       <Home />
       <Footer />
-    </div>
+    </>
   );
 }
-
-export default App;
