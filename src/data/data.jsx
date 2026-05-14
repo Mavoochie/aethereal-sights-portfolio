@@ -6,8 +6,6 @@ export const siteData = {
   },
 };
 
-export default siteData;
-
 export const siteInfo = {
   name: "ÆTHEREAL SIGHT",
   tagline: "Filmmaker & Creative Director",
@@ -31,8 +29,6 @@ export const about = {
   quote: "~Edwine Haika",
 };
 
-// … keep introduction, creativeFocus, signatureStyle, processHighlights, projects, creativeEthos, collaborate as you already have …
-
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -45,3 +41,37 @@ export const navLinks = [
   { label: "Cinema", href: "/cinema" },
 ];
 
+export const projects = [
+  {
+    id: 1,
+    title: "Psychological Portrait Series",
+    location: "Nairobi",
+    description: "A series exploring identity and perception through symbolic photography.",
+    theme: "Exploring the unseen layers of the mind",
+    tags: ["Photography", "Symbolism", "Psychology"]
+  },
+  {
+    id: 2,
+    title: "Cinematic Short Film",
+    location: "Mombasa",
+    description: "An experimental film blending spirituality and cinema.",
+    theme: "Spirituality meets visual storytelling",
+    tags: ["Film", "Experimental", "Spirituality"]
+  }
+];
+
+export const creativeFocus = {
+  title: "Creative Focus",
+  subtitle: "Our areas of expertise",
+  items: [
+    "Wedding Coverage — capturing timeless moments",
+    "Creative Shoots — conceptual and symbolic photography",
+    "Film Production — cinematic storytelling through short and feature films"
+  ]
+};
+
+export const collaborate = {
+  title: "Let’s Work Together",
+  body: "ÆTHEREAL SIGHT is open to collaborations in film, photography, and symbolic art. Share your vision and let’s create something meaningful.",
+  ctaLabel: "Book a Session"
+};
