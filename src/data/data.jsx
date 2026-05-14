@@ -1,8 +1,3 @@
-// ============================================================
-// ÆTHEREAL SIGHT — All Site Data
-// Edit this file to update any content on the website
-// ============================================================
-
 export const siteInfo = {
   name: "ÆTHEREAL SIGHT",
   tagline: "Filmmaker & Creative Director",

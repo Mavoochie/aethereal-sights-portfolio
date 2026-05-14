@@ -1,6 +1,6 @@
-// src/components/Home.jsx
+
 import React from "react";
-import siteData from "../data";
+import siteData from "../data/data.jsx";
 
 function Home() {
   return (
@@ -19,4 +19,3 @@ function Home() {
 }
 
 export default Home;
-
