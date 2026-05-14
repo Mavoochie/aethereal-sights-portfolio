@@ -1,48 +1,44 @@
-
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { navLinks, siteInfo } from "../data/data";
-// Styles are in src/styles/styles.css — imported once in App.jsx
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Add 'scrolled' class when user scrolls down
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on link click
   const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <>
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar__inner">
-
           {/* Logo */}
-          <a href="#home" className="navbar__logo">
+          <Link to="/" className="navbar__logo">
             <span className="navbar__logo-name">{siteInfo.name}</span>
             <span className="navbar__logo-sub">{siteInfo.tagline}</span>
-          </a>
+          </Link>
 
           {/* Desktop links */}
           <ul className="navbar__links">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a href={link.href} className="navbar__link">
+                <Link to={link.href} className="navbar__link" onClick={handleLinkClick}>
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           {/* Desktop CTA */}
-          <a href="#collaborate" className="navbar__cta">
+          <Link to="/booking" className="navbar__cta">
             Let's Work
-          </a>
+          </Link>
 
           {/* Hamburger button (mobile) */}
           <button
@@ -60,14 +56,14 @@ export default function Navbar() {
       {/* Mobile menu overlay */}
       <div className={`navbar__mobile ${menuOpen ? "open" : ""}`}>
         {navLinks.map((link) => (
-          <a
+          <Link
             key={link.label}
-            href={link.href}
+            to={link.href}
             className="navbar__mobile-link"
             onClick={handleLinkClick}
           >
             {link.label}
-          </a>
+          </Link>
         ))}
       </div>
     </>
