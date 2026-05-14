@@ -1,22 +1,23 @@
 import React from "react";
-import siteData from "../data/data.jsx";
+import { siteData } from "../data/data";
 
 export default function Home() {
   return (
     <section className="home">
       <div className="hero">
-        <h1>See Beyond the Visible, Design a reality.</h1>
-        <p>Cinematic storytelling through film, photography, and symbolic art.</p>
+        <h1>{siteData.hero.title}</h1>
+        <p>{siteData.hero.subtitle}</p>
         <div className="cta-buttons">
-          <button>View Work</button>
-          <button>Book a Session</button>
+          {siteData.hero.cta.map((btn) => (
+            <button key={btn}>{btn}</button>
+          ))}
         </div>
       </div>
 
       <div className="intro">
         <p>
           ÆTHEREAL SIGHTS is a creative studio dedicated to capturing what lies beneath the surface.
-          We create visuals that are not only seen—but felt.
+          We create visuals that are not only seen but felt.
         </p>
       </div>
 

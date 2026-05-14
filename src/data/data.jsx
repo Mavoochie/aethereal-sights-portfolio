@@ -44,3 +44,4 @@ export const navLinks = [
   { label: "Journal", href: "/journal" },
   { label: "Cinema", href: "/cinema" },
 ];
+
